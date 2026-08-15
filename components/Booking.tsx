@@ -89,12 +89,12 @@ const INFO_ITEMS = [
   {
     icon: MapPin,
     title: "Find Us",
-    lines: ["123 Rose Lane, Beauty District", "New York, NY 10001"],
+    lines: ["📍Chisti Nagar near Lal Masjid, Nizam hotel street:04", "Karachi, Pakistan"],
   },
   {
     icon: Phone,
     title: "Call Us",
-    lines: ["+1 (800) 555-GLOW", "WhatsApp available"],
+    lines: ["+923168602993 / +923158115247", "WhatsApp available"],
   },
 ]
 
