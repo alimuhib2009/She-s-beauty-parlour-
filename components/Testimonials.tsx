@@ -1,7 +1,8 @@
 "use client"
 
 import { useRef, useState, useEffect, useCallback } from "react"
-import { Star, Quote, ChevronLeft, ChevronRight, Sparkles } from "lucide-react"
+import Image from "next/image"
+import { Star, Quote, ChevronLeft, ChevronRight } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 // ── Review Data ──────────────────────────────────────────────────────────────
@@ -125,7 +126,7 @@ function ReviewCard({ review }: { review: (typeof REVIEWS)[0] }) {
 
       {/* Service badge */}
       <div className="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-rose-50 border border-rose-100 mb-4">
-        <Sparkles className="w-2.5 h-2.5 text-rose-400" />
+        <Image src="/logo.png" alt="" width={10} height={10} className="object-contain rounded-full" />
         <span className="text-[10px] font-semibold text-rose-500 tracking-wide uppercase">
           {review.service}
         </span>
@@ -281,7 +282,7 @@ function FeaturedSlider() {
 
         {/* Service pill */}
         <div className="mt-5 inline-flex items-center gap-1.5 px-3 py-1.5 rounded-full bg-rose-50 border border-rose-100">
-          <Sparkles className="w-3 h-3 text-rose-400" />
+          <Image src="/logo.png" alt="" width={12} height={12} className="object-contain rounded-full" />
           <span className="text-xs font-semibold text-rose-500">{review.service}</span>
         </div>
 

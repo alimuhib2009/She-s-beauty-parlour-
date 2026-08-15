@@ -2,6 +2,7 @@
 
 import { useRef, useEffect, useState } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import {
   Scissors,
   Sparkles,
@@ -250,7 +251,7 @@ export default function Services() {
         >
           {/* Eyebrow */}
           <div className="inline-flex items-center gap-2 mb-4 px-4 py-1.5 rounded-full bg-rose-100 border border-rose-200 text-rose-600 text-xs font-semibold tracking-widest uppercase">
-            <Sparkles className="w-3 h-3" />
+            <Image src="/logo.png" alt="" width={12} height={12} className="object-contain rounded-full" />
             What We Offer
           </div>
 
@@ -289,7 +290,7 @@ export default function Services() {
             id="services-consultation-btn"
             className="inline-flex items-center gap-2 px-8 py-3.5 rounded-full text-sm font-semibold text-white bg-gradient-to-r from-rose-500 via-pink-500 to-amber-400 shadow-lg shadow-pink-200 hover:shadow-xl hover:shadow-pink-300 hover:-translate-y-0.5 transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-rose-400 focus-visible:ring-offset-2"
           >
-            <Sparkles className="w-3.5 h-3.5" />
+            <Image src="/logo.png" alt="" width={14} height={14} className="object-contain rounded-full" />
             Get a Free Consultation
             <ArrowRight className="w-4 h-4" />
           </Link>

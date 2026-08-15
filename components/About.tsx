@@ -4,7 +4,6 @@ import { useRef, useEffect, useState } from "react"
 import Image from "next/image"
 import Link from "next/link"
 import {
-  Sparkles,
   Award,
   Users,
   Clock,
@@ -216,7 +215,7 @@ export default function About() {
             {/* Experience pill */}
             <div className="mt-10 flex justify-center">
               <div className="inline-flex items-center gap-2 px-5 py-2.5 rounded-full bg-gradient-to-r from-rose-500 to-amber-400 text-white text-sm font-semibold shadow-lg shadow-pink-200">
-                <Sparkles className="w-4 h-4" />
+                <Image src="/logo.png" alt="" width={16} height={16} className="object-contain rounded-full" />
                 Serving with love since 2012
               </div>
             </div>
@@ -232,7 +231,7 @@ export default function About() {
           >
             {/* Eyebrow */}
             <div className="inline-flex items-center gap-2 self-start px-4 py-1.5 rounded-full bg-rose-100 border border-rose-200 text-rose-600 text-xs font-semibold tracking-widest uppercase">
-              <Sparkles className="w-3 h-3" />
+              <Image src="/logo.png" alt="" width={12} height={12} className="object-contain rounded-full" />
               Our Story
             </div>
 
@@ -293,7 +292,7 @@ export default function About() {
                 id="about-book-visit-btn"
                 className="inline-flex items-center gap-2 px-7 py-3.5 rounded-full text-sm font-semibold text-white bg-gradient-to-r from-rose-500 via-pink-500 to-amber-400 shadow-lg shadow-pink-200 hover:shadow-xl hover:shadow-pink-300 hover:-translate-y-0.5 transition-all duration-300 focus:outline-none focus-visible:ring-2 focus-visible:ring-rose-400 focus-visible:ring-offset-2"
               >
-                <Sparkles className="w-4 h-4" />
+                <Image src="/logo.png" alt="" width={16} height={16} className="object-contain rounded-full" />
                 Book a Visit
                 <ArrowRight className="w-4 h-4" />
               </Link>

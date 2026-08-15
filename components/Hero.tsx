@@ -3,7 +3,7 @@
 import Image from "next/image"
 import Link from "next/link"
 import { useState, useEffect } from "react"
-import { ArrowRight, Star, Sparkles, ChevronDown } from "lucide-react"
+import { ArrowRight, Star, ChevronDown } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 const stats = [
@@ -63,7 +63,7 @@ export default function Hero() {
                 mounted ? "opacity-100 translate-y-0" : "opacity-0 -translate-y-3"
               )}
             >
-              <Sparkles className="w-3 h-3 text-amber-300" />
+              <Image src="/logo.png" alt="" width={12} height={12} className="object-contain rounded-full" />
               Premium Beauty Experience
               <span className="flex h-1.5 w-1.5 rounded-full bg-rose-400 animate-ping" />
             </div>
@@ -135,7 +135,7 @@ export default function Hero() {
               >
                 <span className="absolute inset-0 bg-gradient-to-r from-rose-500 via-pink-500 to-amber-400 transition-all duration-300 group-hover:from-rose-600 group-hover:to-amber-500" />
                 <span className="absolute inset-0 opacity-0 group-hover:opacity-100 bg-[radial-gradient(circle_at_center,rgba(255,255,255,0.15)_0%,transparent_70%)] transition-opacity duration-300" />
-                <Sparkles className="relative w-4 h-4" />
+                <Image src="/logo.png" alt="" width={16} height={16} className="relative object-contain rounded-full" />
                 <span className="relative">Book Now</span>
                 <ArrowRight className="relative w-4 h-4 transition-transform duration-200 group-hover:translate-x-0.5" />
               </Link>

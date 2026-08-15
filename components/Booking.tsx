@@ -4,8 +4,8 @@ import { useState } from "react"
 import { useForm, Controller } from "react-hook-form"
 import { zodResolver } from "@hookform/resolvers/zod"
 import * as z from "zod"
+import Image from "next/image"
 import {
-  Sparkles,
   Calendar,
   Clock,
   CheckCircle2,
@@ -489,7 +489,7 @@ export default function Booking() {
                         </>
                       ) : (
                         <>
-                          <Sparkles className="w-4 h-4 transition-transform duration-200 group-hover:scale-110" />
+                          <Image src="/logo.png" alt="" width={16} height={16} className="object-contain rounded-full transition-transform duration-200 group-hover:scale-110" />
                           Request Appointment
                         </>
                       )}

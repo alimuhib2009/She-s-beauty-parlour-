@@ -2,7 +2,7 @@
 
 import { useRef, useEffect, useState, useCallback } from "react"
 import Image from "next/image"
-import { Sparkles, ZoomIn, X, ChevronLeft, ChevronRight, Camera } from "lucide-react"
+import { ZoomIn, X, ChevronLeft, ChevronRight, Camera } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 type Category = "All" | "Hair" | "Makeup" | "Nails" | "Skin"
@@ -420,7 +420,7 @@ export default function Gallery() {
             )}
           >
             <p className="text-stone-400 text-xs mb-4 flex items-center justify-center gap-1.5">
-              <Sparkles className="w-3 h-3 text-amber-400" />
+              <Image src="/logo.png" alt="" width={12} height={12} className="object-contain rounded-full" />
               All transformations are performed by our certified beauty experts
             </p>
             <a

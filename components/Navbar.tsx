@@ -2,7 +2,8 @@
 
 import { useState, useEffect } from "react"
 import Link from "next/link"
-import { Menu, X, Sparkles } from "lucide-react"
+import Image from "next/image"
+import { Menu, X } from "lucide-react"
 import { cn } from "@/lib/utils"
 
 const navLinks = [
@@ -50,7 +51,13 @@ export default function Navbar() {
               onClick={() => setActiveLink("Home")}
             >
               <div className="relative flex items-center justify-center w-9 h-9 rounded-full bg-gradient-to-br from-rose-400 via-pink-400 to-amber-300 shadow-md shadow-pink-200 group-hover:scale-110 transition-transform duration-300">
-                <Sparkles className="w-4 h-4 text-white" />
+                <Image
+                  src="/logo.png"
+                  alt="Logo"
+                  width={36}
+                  height={36}
+                  className="object-contain rounded-full p-0.5"
+                />
               </div>
               <div className="flex flex-col leading-none">
                 <span className="text-[11px] font-medium tracking-[0.18em] text-rose-400 uppercase">
@@ -101,7 +108,7 @@ export default function Navbar() {
                 <span className="absolute inset-0 bg-gradient-to-r from-rose-500 via-pink-500 to-amber-400 transition-all duration-300 group-hover:from-rose-600 group-hover:via-pink-600 group-hover:to-amber-500" />
                 {/* Shimmer overlay */}
                 <span className="absolute inset-0 opacity-0 group-hover:opacity-100 transition-opacity duration-500 bg-[linear-gradient(105deg,transparent_20%,rgba(255,255,255,0.25)_50%,transparent_80%)] bg-[length:200%_100%] animate-[shimmer_1.5s_ease_infinite]" />
-                <Sparkles className="relative w-3.5 h-3.5" />
+                <Image src="/logo.png" alt="" width={16} height={16} className="relative object-contain rounded-full" />
                 <span className="relative">Book Appointment</span>
               </Link>
             </div>
@@ -161,9 +168,9 @@ export default function Navbar() {
         {/* Drawer header */}
         <div className="flex items-center justify-between px-6 pt-5 pb-4 border-b border-rose-100">
           <div className="flex items-center gap-2">
-            <div className="w-7 h-7 rounded-full bg-gradient-to-br from-rose-400 via-pink-400 to-amber-300 flex items-center justify-center">
-              <Sparkles className="w-3.5 h-3.5 text-white" />
-            </div>
+              <div className="w-7 h-7 rounded-full bg-gradient-to-br from-rose-400 via-pink-400 to-amber-300 flex items-center justify-center overflow-hidden">
+                <Image src="/logo.png" alt="" width={28} height={28} className="object-contain rounded-full" />
+              </div>
             <span className="text-sm font-bold bg-gradient-to-r from-rose-500 to-amber-500 bg-clip-text text-transparent">
               She&apos;s Beauty Parlour
             </span>
@@ -215,7 +222,7 @@ export default function Navbar() {
             }}
             className="flex items-center justify-center gap-2 w-full py-3.5 rounded-full text-sm font-semibold text-white bg-gradient-to-r from-rose-500 via-pink-500 to-amber-400 shadow-md shadow-pink-200 hover:shadow-lg hover:shadow-pink-300 transition-all duration-300 active:scale-95"
           >
-            <Sparkles className="w-3.5 h-3.5" />
+            <Image src="/logo.png" alt="" width={16} height={16} className="object-contain rounded-full" />
             Book Appointment
           </Link>
           <p className="text-center text-xs text-stone-400 mt-3">

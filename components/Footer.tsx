@@ -2,8 +2,8 @@
 
 import { useState } from "react"
 import Link from "next/link"
+import Image from "next/image"
 import {
-  Sparkles,
   MapPin,
   Phone,
   Mail,
@@ -232,7 +232,7 @@ export default function Footer() {
           <div className="flex flex-col lg:flex-row items-center gap-8 lg:gap-16">
             <div className="flex-1 text-center lg:text-left">
               <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-rose-500/10 border border-rose-500/20 text-rose-400 text-xs font-semibold tracking-widest uppercase mb-3">
-                <Sparkles className="w-2.5 h-2.5" />
+                <Image src="/logo.png" alt="" width={10} height={10} className="object-contain rounded-full" />
                 Newsletter
               </div>
               <h2 className="text-2xl sm:text-3xl font-bold text-white leading-tight">
@@ -264,7 +264,7 @@ export default function Footer() {
           <div className="sm:col-span-2 lg:col-span-1 flex flex-col gap-6">
             <Link href="#home" className="flex items-center gap-2.5 group w-fit" aria-label="She's Beauty Parlour — back to top">
               <div className="w-10 h-10 rounded-xl bg-gradient-to-br from-rose-400 via-pink-400 to-amber-300 flex items-center justify-center shadow-lg shadow-rose-500/20 group-hover:scale-110 transition-transform duration-300 shrink-0">
-                <Sparkles className="w-5 h-5 text-white" />
+                <Image src="/logo.png" alt="" width={20} height={20} className="object-contain rounded-full" />
               </div>
               <div className="flex flex-col leading-none">
                 <span className="text-[10px] font-medium tracking-[0.2em] text-rose-400 uppercase">She&apos;s</span>
@@ -370,7 +370,7 @@ export default function Footer() {
               id="footer-book-cta"
               className="group mt-6 inline-flex items-center gap-2 px-5 py-2.5 rounded-xl text-xs font-semibold text-white bg-gradient-to-r from-rose-500 via-pink-500 to-amber-400 shadow-md shadow-rose-500/20 hover:shadow-lg hover:shadow-rose-500/30 hover:-translate-y-0.5 transition-all duration-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-rose-400"
             >
-              <Sparkles className="w-3 h-3" />
+              <Image src="/logo.png" alt="" width={12} height={12} className="object-contain rounded-full" />
               Book Appointment
               <ArrowRight className="w-3 h-3 transition-transform duration-200 group-hover:translate-x-0.5" />
             </Link>
