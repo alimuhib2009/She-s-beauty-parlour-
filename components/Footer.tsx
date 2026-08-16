@@ -291,17 +291,17 @@ export default function Footer() {
                 <div className="w-7 h-7 rounded-lg bg-rose-500/10 border border-rose-500/20 flex items-center justify-center shrink-0 group-hover:bg-rose-500/20 transition-colors duration-200">
                   <MapPin className="w-3.5 h-3.5 text-rose-400" />
                 </div>
-                <span>123 Rose Lane, Beauty District<br />New York, NY 10001</span>
+                <span>📍Chisti Nagar near Lal Masjid, Nizam hotel street:04<br />Karachi, Pakistan</span>
               </a>
               <a
-                href="tel:+18005554569"
+                href="tel:+923168602993"
                 id="footer-phone-link"
                 className="flex items-center gap-3 text-sm text-white/50 hover:text-white group transition-colors duration-200"
               >
                 <div className="w-7 h-7 rounded-lg bg-rose-500/10 border border-rose-500/20 flex items-center justify-center shrink-0 group-hover:bg-rose-500/20 transition-colors duration-200">
                   <Phone className="w-3.5 h-3.5 text-rose-400" />
                 </div>
-                +1 (800) 555-GLOW
+                +923168602993 / +923158115247
               </a>
               <a
                 href="mailto:hello@shesbeautyparlour.com"

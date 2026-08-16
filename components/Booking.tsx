@@ -22,7 +22,9 @@ import { Textarea } from "@/components/ui/textarea"
 import {
   Select,
   SelectContent,
+  SelectGroup,
   SelectItem,
+  SelectLabel,
   SelectTrigger,
   SelectValue,
 } from "@/components/ui/select"
@@ -52,16 +54,58 @@ const bookingSchema = z.object({
 
 type BookingFormValues = z.infer<typeof bookingSchema>
 
-// ── Services list ──────────────────────────────────────────────────────────
-const SERVICES = [
-  { value: "haircut", label: "✂️  Haircut & Styling" },
-  { value: "facial", label: "🌿  Facial & Skincare" },
-  { value: "bridal", label: "💍  Bridal Makeup" },
-  { value: "nails", label: "💅  Nail Art" },
-  { value: "waxing", label: "🌸  Waxing" },
-  { value: "coloring", label: "🎨  Hair Coloring" },
-  { value: "massage", label: "🧖  Relaxation Massage" },
-  { value: "threading", label: "🪡  Threading" },
+// ── Service Categories ────────────────────────────────────────────────────
+const SERVICE_CATEGORIES = [
+  {
+    label: "✂️  Hair Styling",
+    services: [
+      { value: "haircut-trim",       label: "Haircut & Trim" },
+      { value: "hair-wash-blowdry",  label: "Hair Wash & Blow Dry" },
+      { value: "hair-straightening", label: "Hair Straightening" },
+      { value: "hair-curling",       label: "Hair Curling / Styling" },
+      { value: "keratin-treatment",  label: "Keratin Treatment" },
+    ],
+  },
+  {
+    label: "🎨  Hair Coloring",
+    services: [
+      { value: "root-touch-up",      label: "Root Touch Up" },
+      { value: "full-hair-color",    label: "Full Hair Color" },
+      { value: "highlights-balayage",label: "Highlights / Balayage" },
+      { value: "color-treatment",    label: "Hair Color + Treatment" },
+      { value: "ombre-fashion",      label: "Ombré / Fashion Colors" },
+    ],
+  },
+  {
+    label: "🌿  Facial & Skincare",
+    services: [
+      { value: "classic-facial",     label: "Classic Facial" },
+      { value: "whitening-facial",   label: "Whitening Facial" },
+      { value: "gold-facial",        label: "Gold Facial" },
+      { value: "anti-aging-facial",  label: "Anti-Aging Facial" },
+      { value: "acne-facial",        label: "Acne Treatment Facial" },
+    ],
+  },
+  {
+    label: "💍  Bridal Makeup",
+    services: [
+      { value: "party-makeup",       label: "Party Makeup" },
+      { value: "engagement-makeup",  label: "Engagement Makeup" },
+      { value: "bridal-basic",       label: "Bridal Makeup (Basic)" },
+      { value: "bridal-premium",     label: "Bridal Makeup (Premium)" },
+      { value: "bridal-package",     label: "Bridal Package (Hair + Makeup)" },
+    ],
+  },
+  {
+    label: "🌸  Waxing",
+    services: [
+      { value: "wax-arms",           label: "Full Arms" },
+      { value: "wax-legs",           label: "Full Legs" },
+      { value: "wax-full-body",      label: "Full Body Waxing" },
+      { value: "wax-face",           label: "Face Waxing" },
+      { value: "wax-bikini",         label: "Bikini Waxing" },
+    ],
+  },
 ]
 
 // ── Time slots ─────────────────────────────────────────────────────────────
@@ -364,11 +408,18 @@ export default function Booking() {
                           >
                             <SelectValue placeholder="Choose a service…" />
                           </SelectTrigger>
-                          <SelectContent align="start">
-                            {SERVICES.map((s) => (
-                              <SelectItem key={s.value} value={s.value}>
-                                {s.label}
-                              </SelectItem>
+                          <SelectContent align="start" className="max-h-72">
+                            {SERVICE_CATEGORIES.map((cat) => (
+                              <SelectGroup key={cat.label}>
+                                <SelectLabel className="text-xs font-bold text-stone-500 tracking-widest uppercase px-2 pt-2 pb-1">
+                                  {cat.label}
+                                </SelectLabel>
+                                {cat.services.map((s) => (
+                                  <SelectItem key={s.value} value={s.value} className="pl-5">
+                                    {s.label}
+                                  </SelectItem>
+                                ))}
+                              </SelectGroup>
                             ))}
                           </SelectContent>
                         </Select>
