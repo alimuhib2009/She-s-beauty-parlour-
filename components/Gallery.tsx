@@ -5,7 +5,7 @@ import Image from "next/image"
 import { ZoomIn, X, ChevronLeft, ChevronRight, Camera } from "lucide-react"
 import { cn } from "@/lib/utils"
 
-type Category = "All" | "Hair" | "Makeup" | "Nails" | "Skin"
+type Category = "All" | "Hair" | "Makeup" | "Skin"
 
 interface GalleryItem {
   id: number
@@ -33,14 +33,7 @@ const galleryItems: GalleryItem[] = [
     label: "Bridal Glam",
     span: "wide",
   },
-  {
-    id: 3,
-    src: "/gallery-3.png",
-    alt: "Intricate floral nail art",
-    category: "Nails",
-    label: "Floral Nail Art",
-    span: "normal",
-  },
+
   {
     id: 4,
     src: "/gallery-4.png",
@@ -67,7 +60,7 @@ const galleryItems: GalleryItem[] = [
   },
 ]
 
-const categories: Category[] = ["All", "Hair", "Makeup", "Nails", "Skin"]
+const categories: Category[] = ["All", "Hair", "Makeup", "Skin"]
 
 function useInView(threshold = 0.1) {
   const ref = useRef<HTMLDivElement>(null)
@@ -399,7 +392,7 @@ export default function Gallery() {
           {/* ── Masonry Grid ── */}
           <div
             ref={gridRef}
-            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 auto-rows-auto gap-4 lg:gap-5"
+            className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 auto-rows-auto gap-4 lg:gap-5 grid-flow-dense"
           >
             {filtered.map((item, index) => (
               <GalleryCard

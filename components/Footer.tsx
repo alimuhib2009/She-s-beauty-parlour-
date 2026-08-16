@@ -58,7 +58,6 @@ const SERVICES_LINKS = [
   { label: "Haircut & Styling",   href: "#services" },
   { label: "Bridal Makeup",       href: "#services" },
   { label: "Facial & Skincare",   href: "#services" },
-  { label: "Nail Art",            href: "#services" },
   { label: "Hair Coloring",       href: "#services" },
   { label: "Relaxation Massage",  href: "#services" },
 ]
